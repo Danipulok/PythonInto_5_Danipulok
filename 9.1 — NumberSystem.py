@@ -15,7 +15,7 @@ def numSys(decim, targetNumSys):
         decim_n = decim
         lst_ost.append(decim_n // targetNumSys)
         decim = decim - decim // targetNumSys
-    return lst_ost   
+    return lst_ost
 
 print(numSys(inp, toNumSys))
 
