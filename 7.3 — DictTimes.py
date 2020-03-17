@@ -2,23 +2,16 @@
 # сколько раз оно встречалось в этом тексте.
 # Задачу необходимо решить с использованием словаря.
 
+from pprint import pprint
+
 inp = input('Введите строку: ')
 lst = inp.split(' ')
-print(lst)
+dct = {}
 
-# Лист в ки словаря по одному
-# И если уже там есть, то значение +1
+for element in lst:
+    if element in dct:
+        dct[element] += 1
+    else:
+        dct[element] = 1
 
-
-
-
-
-
-
-
-
-# dct = {key:0 for key in lst}
-# print(dct)
-
-# for i in range(len(dct)):
-#     if 
+pprint(dct)
