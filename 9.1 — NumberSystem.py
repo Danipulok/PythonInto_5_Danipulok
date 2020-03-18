@@ -6,19 +6,65 @@
 #     - строка `ascii_uppercase` из модуля `string` (её можно получить если сделать импорт `from string import 
 #     ascii_uppercase`), она содержит все буквы латинского алфавита.
 
+# ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
 inp = int(input('Введите десятичное число: '))
 toNumSys = int(input('Введитие, в какую систему счисления перевести (2-36): '))
 
 def numSys(decim, targetNumSys):
     lst_ost = []
-    while decim // targetNumSys != 0:
+    while decim != 0:
         decim_n = decim
-        lst_ost.append(decim_n // targetNumSys)
-        decim = decim - decim // targetNumSys
-    return lst_ost
+        if (decim_n % targetNumSys < 10):
+            lst_ost.append(decim_n % targetNumSys)
+        elif (decim_n % targetNumSys == 10):
+            lst_ost.append('A')
+        elif (decim_n % targetNumSys == 11):
+            lst_ost.append('B')
+        elif (decim_n % targetNumSys == 12):
+            lst_ost.append('C')
+        elif (decim_n % targetNumSys == 13):
+            lst_ost.append('D')
+        elif (decim_n % targetNumSys == 14):
+            lst_ost.append('E')
+        elif (decim_n % targetNumSys == 15):
+            lst_ost.append('F')
+        elif (decim_n % targetNumSys == 16):
+            lst_ost.append('G')
+        elif (decim_n % targetNumSys == 17):
+            lst_ost.append('H')
+        elif (decim_n % targetNumSys == 18):
+            lst_ost.append('I')
+        elif (decim_n % targetNumSys == 19):
+            lst_ost.append('J')
+        elif (decim_n % targetNumSys == 20):
+            lst_ost.append('K')
+        elif (decim_n % targetNumSys == 21):
+            lst_ost.append('L')
+        elif (decim_n % targetNumSys == 22):
+            lst_ost.append('M')
+        elif (decim_n % targetNumSys == 23):
+            lst_ost.append('N')
+        elif (decim_n % targetNumSys == 24):
+            lst_ost.append('O')
+        elif (decim_n % targetNumSys == 25):
+            lst_ost.append('P')
+        elif (decim_n % targetNumSys == 26):
+            lst_ost.append('Q')
+        elif (decim_n % targetNumSys == 27):
+            lst_ost.append('R')
+        elif (decim_n % targetNumSys == 28):
+            lst_ost.append('S')
+        elif (decim_n % targetNumSys == 29):
+            lst_ost.append('T')
+        elif (decim_n % targetNumSys == 30):
+            lst_ost.append('U')
+        elif (decim_n % targetNumSys == 31):
+            lst_ost.append('V')                                                                                                                                                                                                                                                                                                                                                                               
+        # print('{} // {} = {}'.format(decim, targetNumSys, decim_n % targetNumSys))
+        decim //= targetNumSys
+    lst_ost = lst_ost[::-1]
+    res = ''.join(str(element) for element in lst_ost)
+    return res
 
 print(numSys(inp, toNumSys))
-
-
-
-        
