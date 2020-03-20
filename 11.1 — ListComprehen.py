@@ -6,12 +6,5 @@
 # Задача решается в одну строку.
 
 from pprint import pprint
-
-for i in range(32, 127):
-    print(chr(i))
-
-# dct = {key: value for key, value in zip([1, 2, 3], ['a', 'b', 'c'])}
-dct = {key: value for key, value in zip([1, 2, 3], ('a', 'b', 'c'))}
-# dct = {key: value for key, value in zip(range(32,127), chr(value))}
-
+dct = {i:chr(i) for i in range(32, 128)}
 pprint(dct)

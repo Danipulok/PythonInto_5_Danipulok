@@ -30,7 +30,6 @@ inp = [
 x = lambda a, b: round(i[2] * i[3] + 10, 2)
 
 for i in inp:
-    # i = tuple(i)
     if(i[2] * i[3] < 100):
         i[1] = x(i[2], i[3])
     else:
@@ -39,3 +38,15 @@ for i in inp:
     
 res = list(map(tuple, inp))
 print(res)
+
+# Или:
+
+# inp = [
+# [34587, 'Learning Python, Mark Lutz', 4, 40.95],
+# [98762, 'Programming Python, Mark Lutz', 5, 56.80],
+# [77226, 'Head First Python, Paul Barry', 3, 32.95],
+# [88112, 'Einfuhrung in Python3, Bernd Klein', 3, 24.99]
+# ]
+
+# dct = list(map(lambda x: (x[0], round(x[2] * x[3], 2) if x[2] * x[3] >= 100 else round(x[2] * x[3] + 10, 2)), inp))
+# print(dct)

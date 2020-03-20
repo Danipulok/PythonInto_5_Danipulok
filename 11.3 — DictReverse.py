@@ -3,8 +3,17 @@
 # создать новый словарь, у которого в качестве ключей будут взяты латинские слова, из первого словаря, 
 # а значениями будут, соответствующие им, английские слова.
 
-# d = {
-#     	'apple': ['malum', 'pomum', 'popula'],
-#     	'fruit': ['baca', 'bacca', 'popum'],
-#     	'punishment': ['malum', 'multa']
-# }
+from pprint import pprint
+
+dct = {
+    	'apple': ['malum', 'pomum', 'popula'],
+    	'fruit': ['baca', 'bacca', 'popum'],
+    	'punishment': ['malum', 'multa']
+}
+
+n_dct = {}
+for key in dct:
+    for value in dct[key]:
+        n_dct[value] = key
+
+pprint(n_dct)
