@@ -15,10 +15,7 @@ inp = int(input('Введите число: '))
 
 def sumByRate(number):
     
-    # res = sum([int(i) * int(list(str(number)).index(i)+1) for i in list(str(number))])
-    # res = sum([int(i) * x for x in range(1,15) for i in list(str(number))])
-    res = sum([int(i) * int(list(str(number)).index(i)+1) for i in list(str(number))])
-    
+    res = sum([[x for x in range(1, len(str(number))+1)][j] * [int(i) for i in str(number)][j] for j in range(len(str(number)))])
     return res
 
 print('Сумма с заданными параметрами:', sumByRate(inp))
