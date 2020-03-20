@@ -6,8 +6,6 @@
 #     - строка `ascii_uppercase` из модуля `string` (её можно получить если сделать импорт `from string import 
 #     ascii_uppercase`), она содержит все буквы латинского алфавита.
 
-# ABCDEFGHIJKLMNOPQRSTUVWXYZ
-
 from string import ascii_uppercase
 
 inp = int(input('Введите десятичное число: '))
@@ -25,7 +23,7 @@ def numSys(decim, targetNumSys):
     res = res[::-1]
     return res
 
-print('Результат: ', numSys(inp, toNumSys))
+print('Результат:', numSys(inp, toNumSys))
 
 # Или:
 
