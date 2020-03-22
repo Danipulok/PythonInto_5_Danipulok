@@ -4,13 +4,12 @@
 # направление сдвига (по умолчанию влево (False)).
 
 def CyclicShift(inp, rate = 1, dir = False):
+    inp = str(inp)
     if dir == False:
-        for _ in range(rate):
-            inp = inp * 10
+        res = inp[len(inp)-rate : len(inp)] + inp[: len(inp)-rate]
     else:
-        for _ in range(rate):
-            inp = inp / 10
-    return inp
+        res = inp[rate : len(inp)] + inp[: rate]
+    return res
 
 inp = int(input('Введите число: '))
 rate = int(input('Введите кол-во разрядов, на которое хотите сдвинуть: '))
