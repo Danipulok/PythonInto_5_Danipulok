@@ -14,6 +14,24 @@ dct = {
 n_dct = {}
 for key in dct:
     for value in dct[key]:
-        n_dct[value] = key
+        if value not in n_dct:
+        	n_dct[value] = key
+        else:
+            n_dct[value] = n_dct[value] + ' ' + key
 
 pprint(n_dct)
+
+
+# Value is list version
+
+# n_dct = {}
+# for key in dct:
+#     for value in dct[key]:
+#         if value in n_dct:
+#             if type(n_dct[value]) == str:
+#                 temp_lst = list()
+#                 temp_lst.append(n_dct[value])
+#                 n_dct[value] = temp_lst
+#             n_dct[value].append(key)
+#         else:
+#             n_dct[value] = key

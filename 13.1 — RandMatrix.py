@@ -34,7 +34,6 @@
 
 # 452 489 469 422 473 362 448 467 432 448
 
-from pprint import pprint
 import random
 
 rows = int(input('Введите количество строк: '))

@@ -4,9 +4,8 @@
 # и вернутся в первоначальное положение.
 
 inp = input('Введите список: ')
-lst = inp.split(' ')
-
+lst = list(map(int, inp.split(' ')))
 for i in range(len(lst)//2):
-    lst[i], lst[(len(lst)-1-i)] = lst[(len(lst)-1-i)], lst[i]
-    
+    lst[i], lst[-1-i] = lst[-1-i], lst[i]
+
 print(lst)
